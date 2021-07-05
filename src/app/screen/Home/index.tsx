@@ -7,15 +7,15 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { commafy } from "../../components/index";
 import Style from './style';
 
-// interface NavigationProps {
-//     // navigation: StackNavigationProp<
-// };
+interface NavigationProps {
+    navigation: any
+};
 
 // type Props = {
 // 	navigation?: StackNavigationProp<any,any>;
 // };
 
-const Home: FC = ({ navigation }: any) => {
+const Home: FC<NavigationProps> = ({ navigation }) => {
 
     const [inventories, setInventories] = useState<any>([]);
     const [loading, setLoading] = useState<boolean>(true);
@@ -42,7 +42,7 @@ const Home: FC = ({ navigation }: any) => {
 
             <View style={Style.headerContainer}>
                 <View>
-                    <StatusBar backgroundColor={'transparent'}  barStyle='dark-content' />
+                    <StatusBar backgroundColor={'transparent'}  barStyle='dark-content' translucent={true} />
                 </View>
             </View>
 

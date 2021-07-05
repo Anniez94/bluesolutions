@@ -12,8 +12,6 @@ target 'bluemoon_solutions' do
     :hermes_enabled => false
   )
 
-  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
-
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
   target 'bluemoon_solutionsTests' do
